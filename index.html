@@ -3,185 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Your Game Platform</title>
     <style>
+        /* Add your CSS styles here */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
         }
 
         header {
             background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            text-align: right;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffd700;
-        }
-
-        .section {
-            padding: 80px 0;
-        }
-
-        h2 {
-            color: #333;
-            text-align: center;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .project {
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #fff;
-            transition: transform 0.3s;
-        }
-
-        .project:hover {
-            transform: scale(1.02);
-        }
-
-        form {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        label {
-            display: block;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        input, textarea {
-            width: 100%;
+            color: white;
             padding: 10px;
-            border: 1px solid #ddd;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #333;
-            color: #fff;
-            padding: 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
+
+        /* Add more styles for different sections of your website */
     </style>
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <h1 style="margin: 0;">My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Your Game Platform</h1>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-        </div>
+    <section id="login">
+        <!-- Add your login form or authentication UI here -->
+        <h2>Login</h2>
+        <form>
+            <!-- Your login form fields -->
+            <button type="submit">Login</button>
+        </form>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-            </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
+    <section id="games">
+        <!-- Add a list of available games or game thumbnails here -->
+        <h2>Available Games</h2>
+        <div class="game-thumbnail">
+            <!-- Game 1 -->
+            <img src="game1-thumbnail.jpg" alt="Game 1">
+            <p>Game 1 Description</p>
+            <button onclick="joinGame(1)">Join Game</button>
         </div>
+
+        <div class="game-thumbnail">
+            <!-- Game 2 -->
+            <img src="game2-thumbnail.jpg" alt="Game 2">
+            <p>Game 2 Description</p>
+            <button onclick="joinGame(2)">Join Game</button>
+        </div>
+
+        <!-- Add more game thumbnails as needed -->
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <section id="footer">
+        <!-- Add footer content, links, etc. -->
+        <p>&copy; 2023 Your Game Platform</p>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 My Portfolio</p>
-        </div>
-    </footer>
+    <script>
+        // Add your JavaScript code here for game joining, authentication, etc.
+        function joinGame(gameId) {
+            // Implement logic to join the selected game
+            console.log(`Joining Game ${gameId}`);
+        }
+    </script>
 
 </body>
 </html>
+
