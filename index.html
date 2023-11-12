@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Game Platform</title>
+    <title>Your GitHub Projects</title>
     <style>
-        /* Add your CSS styles here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,61 +14,60 @@
         header {
             background-color: #333;
             color: white;
-            padding: 10px;
             text-align: center;
+            padding: 1em;
         }
 
-        /* Add more styles for different sections of your website */
+        #projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 2em;
+        }
+
+        .project {
+            width: 300px;
+            margin: 1em;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Your Game Platform</h1>
+        <h1>Your GitHub Projects</h1>
     </header>
-
-    <section id="login">
-        <!-- Add your login form or authentication UI here -->
-        <h2>Login</h2>
-        <form>
-            <!-- Your login form fields -->
-            <button type="submit">Login</button>
-        </form>
-    </section>
-
-    <section id="games">
-        <!-- Add a list of available games or game thumbnails here -->
-        <h2>Available Games</h2>
-        <div class="game-thumbnail">
-            <!-- Game 1 -->
-            <img src="game1-thumbnail.jpg" alt="Game 1">
-            <p>Game 1 Description</p>
-            <button onclick="joinGame(1)">Join Game</button>
+    
+    <section id="projects">
+        <div class="project">
+            <h2>Project Title 1</h2>
+            <p>Description of the project 1.</p>
+            <a href="link-to-your-github-repo-1">GitHub Repository</a>
         </div>
 
-        <div class="game-thumbnail">
-            <!-- Game 2 -->
-            <img src="game2-thumbnail.jpg" alt="Game 2">
-            <p>Game 2 Description</p>
-            <button onclick="joinGame(2)">Join Game</button>
+        <div class="project">
+            <h2>Project Title 2</h2>
+            <p>Description of the project 2.</p>
+            <a href="link-to-your-github-repo-2">GitHub Repository</a>
         </div>
 
-        <!-- Add more game thumbnails as needed -->
+        <!-- Add more projects as needed -->
     </section>
 
-    <section id="footer">
-        <!-- Add footer content, links, etc. -->
-        <p>&copy; 2023 Your Game Platform</p>
-    </section>
-
-    <script>
-        // Add your JavaScript code here for game joining, authentication, etc.
-        function joinGame(gameId) {
-            // Implement logic to join the selected game
-            console.log(`Joining Game ${gameId}`);
-        }
-    </script>
-
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
 </body>
 </html>
 
