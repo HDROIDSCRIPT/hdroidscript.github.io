@@ -6,23 +6,69 @@
     <title>HDROID's Github Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
         header {
-            background-color: #333;
+            background: linear-gradient(to right, rgb(0, 0, 0), #000000);
             color: white;
             text-align: center;
-            padding: 1em;
+            padding: 2em 1em;
+            border-bottom: 2px solid #ddd;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.1;
+            z-index: -1;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            color: #ddd;
+            margin-top: 0.5em;
+        }
+
+        header button {
+            background-color: #007BFF;
+            color: white;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 5px;
+            margin: 0.5em;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        header button:hover {
+            background-color: rgb(0, 0, 0);
         }
 
         #projects {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow-y: auto;
+            padding: 2em;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            padding: 2em;
         }
 
         .project {
@@ -30,38 +76,60 @@
             margin: 1em;
             padding: 1em;
             border: 1px solid #ddd;
-            border-radius: 5px;
+            border-radius: 10px;
+            background-color: white;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            box-shadow: 0px 0px 15px 0px #aaa;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        a {
+            display: block;
+            margin-top: 1em;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         footer {
-            background-color: #333;
+            background: linear-gradient(to right, #000000, rgb(0, 0, 0));
             color: white;
             text-align: center;
             padding: 1em;
             position: fixed;
             bottom: 0;
             width: 100%;
+            border-top: 2px solid #ddd;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>HDROID's Github Website</h1>
-        <h1>Projects:</h1>
     </header>
     
     <section id="projects">
         <div class="project">
-            <h2>Project Title 1</h2>
-            <p>Description of the project 1.</p>
-            <a href="link-to-your-github-repo-1">GitHub Repository</a>
+            <h2>Roblox Avatar Loader</h2>
+            <p>A Website Where You Can Load Roblox Avatars.</p>
+            <a href="link-to-your-github-repo-1">Visit Website</a>
         </div>
 
-        <div class="project">
-            <h2>Project Title 2</h2>
-            <p>Description of the project 2.</p>
-            <a href="link-to-your-github-repo-2">GitHub Repository</a>
-        </div>
+        <!-- Repeat the project div for each project -->
 
         <!-- Add more projects as needed -->
     </section>
@@ -71,4 +139,3 @@
     </footer>
 </body>
 </html>
-
