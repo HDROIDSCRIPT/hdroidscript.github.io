@@ -3,139 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HDROID's Github Website</title>
+    <title>Free Bobux</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background: linear-gradient(to right, rgb(0, 0, 0), #000000);
-            color: white;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
             text-align: center;
-            padding: 2em 1em;
-            border-bottom: 2px solid #ddd;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            padding-top: 50px;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/cubes.png');
-            opacity: 0.1;
-            z-index: -1;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            color: #ddd;
-            margin-top: 0.5em;
-        }
-
-        header button {
-            background-color: #007BFF;
-            color: white;
-            padding: 0.5em 1em;
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
             border: none;
-            border-radius: 5px;
-            margin: 0.5em;
             cursor: pointer;
-            transition: background-color 0.3s ease-in-out;
+            border-radius: 5px;
         }
 
-        header button:hover {
-            background-color: rgb(0, 0, 0);
-        }
-
-        #projects {
-            max-width: 1200px;
-            margin: 0 auto;
-            overflow-y: auto;
-            padding: 2em;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .project {
-            width: 300px;
-            margin: 1em;
-            padding: 1em;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: white;
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .project:hover {
-            box-shadow: 0px 0px 15px 0px #aaa;
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        p {
-            color: #666;
-        }
-
-        a {
-            display: block;
-            margin-top: 1em;
-            color: #000000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            background: linear-gradient(to right, #000000, rgb(0, 0, 0));
-            color: white;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            border-top: 2px solid #ddd;
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>HDROID's Github Website</h1>
-    </header>
-    
-    <section id="projects">
-        <div class="project">
-            <h2>Roblox Avatar Loader</h2>
-            <p>A Website Where You Can Load Roblox Avatars.</p>
-            <a href="http://robloxwebtesting1.great-site.net/">Visit Website</a>
-        </div>
+    <button onclick="openBouncingWindow()">Click here to get free bobuc!1!1</button>
 
-        <!-- Repeat the project div for each project -->
+    <script>
+        function openBouncingWindow() {
+            // Detect mobile device and redirect if necessary
+            if (/Mobi|Android/i.test(navigator.userAgent)) {
+                alert("Mobile users are not allowed to access this page.");
+                return;
+            }
 
-        <!-- Add more projects as needed -->
-    </section>
+            var newWindow = window.open("", "BouncingWindow", "width=300,height=300");
 
-    <footer>
-        <p>&copy; 2023 HDROID</p>
-    </footer>
+            // Function to generate a random position within the screen boundaries
+            function getRandomPosition() {
+                var x = Math.floor(Math.random() * (window.innerWidth - 300));
+                var y = Math.floor(Math.random() * (window.innerHeight - 300));
+                return { x: x, y: y };
+            }
+
+            // Function to animate the window bouncing effect
+            function animate() {
+                var newPos = getRandomPosition(); // Get a new random position
+                newWindow.moveTo(newPos.x, newPos.y); // Move the window to the new position
+
+                // Repeat the animation
+                setTimeout(animate, 1000); // 1 second for slower animation
+            }
+
+            animate(); // Start the animation
+
+            // Writing content to the new window
+            newWindow.document.write(`
+                <html>
+                <head>
+                    <title>LOL</title>
+                </head>
+                <body>
+                    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwxF6Gx43KlTRJG0GsFEppzkxitUCGkQs1OQ&s" alt="Trolled Image" style="max-width: 100%;">
+                        <h1>You have been trolled!</h1>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+    </script>
 </body>
 </html>
